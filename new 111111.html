@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Сумма значений абзацев</title>
+</head>
+<body>
+
+<p id="p1">Абзац 1: 10 20 30</p>
+<p id="p2">Абзац 2: 5 15 25</p>
+
+<button onclick="calculateSum()">Найти сумму</button>
+
+<p id="result"></p>
+
+<script>
+function calculateSum() {
+    var paragraph1Text = document.getElementById('p1').innerText;
+    var paragraph2Text = document.getElementById('p2').innerText;
+
+    var numbers1 = paragraph1Text.match(/\d+/g).map(Number);
+    var numbers2 = paragraph2Text.match(/\d+/g).map(Number);
+
+    var sum1 = numbers1.reduce((acc, curr) => acc + curr, 0);
+    var sum2 = numbers2.reduce((acc, curr) => acc + curr, 0);
+
+    var totalSum = sum1 + sum2;
+
+    document.getElementById('result').innerText = "Сумма значений абзацев: " + totalSum;
+}
+</script>
+
+</body>
+</html>
