@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>квадрат</title>
+</head>
+<body>
+<script>
+function sumElements(arr)
+ {
+    let total = 0;
+    for (let num of arr) {
+        total += Math.sqrt(num);
+    }
+    return total;
+}
+
+const array = [9, 16, 25]; 
+const result = sumElements(array);
+alert(result);
+</script>
+
+</body>
+</html>

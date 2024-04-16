@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>квадрат</title>
+</head>
+<body>
+
+<p>Введите число: <input type="number" id="numberInput"></p>
+<button onclick="squareNumber()">Возвести в квадрат</button>
+<p>Результат: <span id="result"></span></p>
+
+<script>
+function squareNumber() {
+    var numberInput = document.getElementById("numberInput");
+
+    var number = parseFloat(numberInput.value);
+
+     if (!isNaN(number)) {
+       
+        var result = number * number;
+
+        var resultSpan = document.getElementById("result");
+
+        resultSpan.textContent = result;
+    } 
+	}
+</script>
+
+</body>
+</html>
